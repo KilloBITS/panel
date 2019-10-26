@@ -1,0 +1,31 @@
+.content-box{
+  padding-top: 50px;
+  height: calc(100% - 58px);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  .tournaments{
+    width: calc(100% / 4 - 22px);
+    display: inline-block;
+    text-align: center;
+    margin: 5px;
+    padding: 10px 5px;
+    text-transform: uppercase;
+    border: 1px solid #eaeaea;
+    background-color: #f3f3f3;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 3px;
+    .title{
+
+    }
+    .image{
+      width: 100%;
+      img{
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+

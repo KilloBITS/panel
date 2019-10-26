@@ -1,18 +1,39 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+/* Import redux */
+import { reducers, metaReducers } from './reducers';
+/* Pages */
+import { MainComponent } from './pages/main/main.component';
+import { TournamentsComponent } from './pages/tournaments/tournaments.component';
+import { NewsComponent } from './pages/news/news.component';
+
+import { StoreModule } from '@ngrx/store';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent,
+    TournamentsComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    StoreModule.forRoot(reducers, {
+      metaReducers,
+      runtimeChecks: {
+        strictStateImmutability: true,
+        strictActionImmutability: true
+      }
+    })
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
