@@ -6,7 +6,7 @@ import { TournamentsComponent } from './pages/tournaments/tournaments.component'
 import { NewsComponent } from './pages/news/news.component';
 
 const routes: Routes = [
-  { path: '', component: MainComponent },
+  { path: 'main', component: MainComponent },
   { path: 'tournaments', component: TournamentsComponent },
   { path: 'news', component: NewsComponent },
 ];

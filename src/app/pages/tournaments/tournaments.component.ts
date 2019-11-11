@@ -10,13 +10,11 @@ import { Tournaments } from '../../models/tournaments';
 })
 export class TournamentsComponent implements OnInit {
   tournaments: Tournaments;
-
   constructor(private httpService: HttpService) {}
 
   ngOnInit() {
     this.httpService.getTournaments().subscribe((data: Tournaments) => {
       this.tournaments = data;
-      console.log(this.tournaments);
     });
   }
 }

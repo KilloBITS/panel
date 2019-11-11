@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent {}
+export class AppComponent {
+  active: number;
+  key: number;
+  constructor() {}
+
+  selectButtonNav($event) {
+    const keyEvent = $event.target.getAttribute('key');
+    this.active = Number(keyEvent);
+  }
+}

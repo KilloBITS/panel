@@ -1,21 +1,21 @@
 .content-box{
-  padding-top: 50px;
-  height: calc(100% - 58px);
+  padding-top: 45px;
+  height: calc(100% - 45px);
   position: absolute;
   left: 0;
+  top: 0;
   width: 100%;
   .tournaments{
-    width: calc(100% / 4 - 22px);
+    width: calc(100% / 4 - 20px);
     display: inline-block;
     text-align: center;
     margin: 5px;
     padding: 10px 5px;
     text-transform: uppercase;
-    border: 1px solid #eaeaea;
     background-color: #f3f3f3;
     cursor: pointer;
     overflow: hidden;
-    border-radius: 3px;
+    box-shadow: 2px 0 2px rgba(0, 0, 0, 0.08);
     .title{
 
     }

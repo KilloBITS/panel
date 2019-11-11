@@ -1,3 +1,5 @@
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+
 @font-face {
   font-family: "Pubg_font";
   src: url(./assets/fonts/pubg_font.ttf);
@@ -7,8 +9,28 @@
   src: url(./assets/fonts/17793.otf);
 }
 
+/** Scroll bars **/
+.box1280::-webkit-scrollbar-track
+{
+  background-color: #202020;
+  /* border-left: 1px solid #ffb400; */
+}
+
+.box1280::-webkit-scrollbar{
+  width: 6px;
+  background-color: #000000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.box1280::-webkit-scrollbar-thumb{
+  background-color: #e19f00;
+  border-radius: 0;
+  cursor: pointer;
+}
+
 body{
-  font-family: "Default";
+  font-family: Default;
 }
 
 .isLoad{
@@ -25,6 +47,134 @@ body{
 }
 
 .box1280{
-  max-width: 1280px;
+  max-width: calc(100% - 260px);
   margin: auto;
+  float: left;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.button{
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 3px;
+  cursor: pointer;
+  float: left;
+  &.noBordelLeft{
+    border-radius: 0 5px 5px 0;
+    border-left: 1px solid;
+  }
+  &.noBordelRight{
+    border-radius: 5px 0 0 5px;
+    border: 0;
+  }
+}
+
+.w20{
+  width: 20%;
+  &.bbMinus{
+    width: calc(20% - 1px);
+  }
+}
+
+.w50{
+  width: 50%;
+  &.bbMinus{
+    width: calc(50% - 1px);
+  }
+}
+
+.w80{
+  width: 80%;
+  &.bbMinus{
+    width: calc(80% - 1px);
+  }
+}
+
+/** Backgrounds button **/
+.bGreen{
+  background-color: #37c337;
+  transition: .2s;
+  border-color:  silver!important;
+  &:hover{
+    background-color: #4eda4e;
+  }
+}
+
+.bOrange{
+  background-color: #ffab00;
+  color: #000;
+  transition: .2s;
+  border-color:  silver!important;
+  &:hover{
+    background-color: #e69a00;
+  color: #202020;
+  }
+}
+
+.bRed{
+  background-color: #ff4444;
+  transition: .2s;
+  border-color:  silver!important;
+  &:hover{
+    background-color: #ff6060;
+  }
+}
+/** instruments **/
+.instruments-menu{
+  float: left;
+  width: 260px;
+  background-color: #dadada;
+  height: calc(100% + 15px);
+  margin-top: -15px;
+  box-shadow: 2px 0 8px rgba(0,0,0,.08);
+  .instruments-content{
+    float: left;
+    width: calc(100% - 20px);
+    padding: 10px;
+    .instruments-head{
+      float: left;
+      .logotype{
+        float: left;
+        width: 100%;
+        img{
+          width: 100%;
+          float: left;
+        }
+      }
+    }
+    .instruments-body{
+      float: left;
+      width: 100%;
+      .instrument-statistic{
+        width: 100%;
+        .statistic-line{
+          float: left;
+          width: 100%;
+        }
+        .instrument-title{
+          width: fit-content;
+          font-size: 18px;
+          color: #868686;
+          text-shadow: 1px 1px 0 rgba(236, 236, 236, 0.7);
+          float: left;
+        }
+        .instrument-content{
+          font-size: 20px;
+          color: #2f2f2f;
+          text-shadow: 1px 1px 0 rgba(236, 236, 236, 0.7);
+          float: left;
+          padding: 0 10px;
+        }
+      }
+      .button{
+        width: 100%;
+        margin: 5px 0;
+        color: #ffffffd1;
+      }
+    }
+    .instruments-footer{
+      float: left;
+    }
+  }
 }
