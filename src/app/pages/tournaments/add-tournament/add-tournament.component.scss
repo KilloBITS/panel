@@ -1,0 +1,92 @@
+.add-tournament{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: white;
+  width: 800px;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  overflow: hidden;
+  .add-tournament-line{
+    float: left;
+    width: calc(100% - 20px);
+    padding: 10px;
+    position: relative;
+    .add-tour-data{
+      width: calc(100% / 3 - 7px);
+    }
+    &.header{
+      background-color: #6bbd54;
+      float: left;
+      width: calc(100% - 20px);
+      padding: 10px;
+      position: relative;
+      color: #3c7b2a;
+      text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.29);
+      .close-modal{
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #3c7b2a;
+      }
+    }
+    &.body{
+      background-color: white;
+      padding: 0;
+      width: 100%;
+      height: 500px;
+    }
+    &.footer{
+      background-color: #f1f1f1;
+      .button{
+        float: right;
+        padding: 6px 20px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.add-tournament-line{
+  &.body{
+    .tab-menu{
+      float: left;
+      width: 40px;
+      height: 100%;
+      background-color: #f1f1f1;
+      .tab-btn{
+        float: left;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        &.active{
+          background-color: #d0d0d0;
+        }
+      }
+    }
+    .tab-content{
+      float: left;
+      width: calc(100% - 40px);
+      height: 100%;
+      .tab{
+        width: 100%;
+        float: left;
+        display: none;
+        &.active{
+          display: block;
+        }
+        .tab-title{
+          width: 100%;
+          float: left;
+          text-align: center;
+          text-transform: uppercase;
+          padding: 5px 0;
+          background-color: whitesmoke;
+          border-bottom: 1px solid #e8e8e8;
+        }
+      }
+    }
+  }
+}

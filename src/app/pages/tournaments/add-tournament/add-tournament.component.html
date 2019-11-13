@@ -1,0 +1,35 @@
+<div class="add-tournament">
+  <div class="add-tournament-line header">
+    <i class="fas fa-plus"></i> Создать турнир
+    <div class="close-modal"><i class="fas fa-times"></i></div>
+  </div>
+  <div class="add-tournament-line body">
+
+    <div class="tab-menu">
+      <div class="tab-btn active" (click)="selectTab(1)">1</div>
+      <div class="tab-btn" (click)="selectTab(2)">2</div>
+      <div class="tab-btn" (click)="selectTab(3)">3</div>
+      <div class="tab-btn" (click)="selectTab(4)">4</div>
+    </div>
+    <div class="tab-content">
+      <div [className]="selecttab === 1 ? 'tab active' : 'tab'" id="1">
+        <div class="tab-title">Локализация турнира</div>
+      </div>
+      <div [className]="selecttab === 2 ? 'tab active' : 'tab'" id="2">
+        <div class="tab-title">Настройки режимов</div>
+      </div>
+      <div [className]="selecttab === 3 ? 'tab active' : 'tab'" id="3">
+        <div class="tab-title">Настройки участников</div>
+      </div>
+      <div [className]="selecttab === 4 ? 'tab active' : 'tab'" id="4">
+        <div class="tab-title"></div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="add-tournament-line footer">
+    <div class="button bRed">Отмена</div>
+    <div class="button bGreen">Сохранить</div>
+  </div>
+</div>

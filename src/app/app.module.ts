@@ -14,6 +14,7 @@ import { InstrumentsComponent } from './pages/tournaments/instruments/instrument
 
 import { StoreModule } from '@ngrx/store';
 import { HttpClientModule } from '@angular/common/http';
+import { AddTournamentComponent } from './pages/tournaments/add-tournament/add-tournament.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     MainComponent,
     TournamentsComponent,
     NewsComponent,
-    InstrumentsComponent
+    InstrumentsComponent,
+    AddTournamentComponent
   ],
   imports: [
     BrowserModule,

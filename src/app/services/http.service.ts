@@ -4,9 +4,9 @@ import {HttpClient} from '@angular/common/http';
 @Injectable()
 export class HttpService {
 
-  constructor(private httpService: HttpClient){ }
+  constructor(private httpService: HttpClient) { }
 
-  getTournaments(){
+  getTournaments() {
     return this.httpService.get('http://localhost/panel/all-tournaments');
   }
 

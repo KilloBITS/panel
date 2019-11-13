@@ -8,7 +8,7 @@
       <div class="tournaments" *ngFor="let tour of tournaments.tournaments ">
         <div class="tournament-line title">{{tour.AI + " | " +tour.title[0]}}</div>
         <div class="tournament-line image">
-          <img src="http://localhost/data/tournaments/map/{{tour.map}}.png"/>
+          <img src="http://localhost/data/tournaments/map/{{tour.map}}.png" alt=""/>
         </div>
         <div class="button bOrange w80 noBordelRight"><i class="fas fa-edit"></i> Редактировать</div>
         <div class="button bOrange w20 noBordelLeft bbMinus"><i class="fas fa-bars"></i></div>
@@ -19,3 +19,5 @@
     </ng-template>
   </div>
 </div>
+
+<app-add-tournament id="addModal" class="modal"></app-add-tournament>
