@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-tournament.component.scss']
 })
 export class AddTournamentComponent implements OnInit {
-  selecttab = 1;
+  public selectedtab = 1;
 
   constructor() { }
 
@@ -14,6 +14,6 @@ export class AddTournamentComponent implements OnInit {
   }
 
   selectTab($event) {
-    this.selecttab = $event;
+    this.selectedtab = $event;
   }
 }
