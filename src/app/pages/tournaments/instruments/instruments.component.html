@@ -1,0 +1,31 @@
+<div class="instruments-content">
+    <div class="instruments-head">
+        <div class="logotype">
+            <img src="../../../assets/img/logo.png" alt=""/>
+        </div>
+    </div>
+    <div class="instruments-body">
+
+        <div class="instrument-statistic">
+            <div class="statistic-line">
+                <div class="instrument-title">Всего турниров</div>
+                <div class="instrument-content" *ngIf="alltournaments !== null">{{alltournaments}}</div>
+            </div>
+            <div class="statistic-line">
+                <div class="instrument-title">Активных турниров</div>
+                <div class="instrument-content" *ngIf="currenttournaments !== null">{{currenttournaments}}</div>
+            </div>
+            <div class="statistic-line">
+                <div class="instrument-title">Завершенных турниров</div>
+                <div class="instrument-content" *ngIf="oldtournaments !== null">{{oldtournaments}}</div>
+            </div>
+        </div>
+
+      <div class="button bGreen">Создать турнир</div>
+      <div class="button bRed">Удалить</div>
+
+    </div>
+    <div class="instruments-footer">
+
+    </div>
+</div>
