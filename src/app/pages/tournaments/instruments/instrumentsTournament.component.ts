@@ -2,11 +2,11 @@ import { Input, Component, OnInit, OnChanges } from '@angular/core';
 import { Tournaments } from '../../../models/tournaments';
 
 @Component({
-  selector: 'app-instruments',
-  templateUrl: './instruments.component.html',
-  styleUrls: ['./instruments.component.scss']
+  selector: 'app-instruments-tournaments',
+  templateUrl: './instrumentsTournament.component.html',
+  styleUrls: ['./instrumentsTournament.component.scss']
 })
-export class InstrumentsComponent implements OnInit, OnChanges {
+export class InstrumentsTournamentComponent implements OnInit, OnChanges {
   @Input() tournamentsData: Tournaments;
 
   alltournaments: number = null;

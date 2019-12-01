@@ -1,0 +1,16 @@
+<div class="content-box">
+  <div class="instruments-menu">
+    <app-instruments-shop [productsData]="products"></app-instruments-shop>
+  </div>
+  <div class="box1280">
+    <div class="tournament-box" *ngIf="products;then yesproducts else notproducts"></div>
+    <ng-template #yesproducts>
+      <div class="tournaments" *ngFor="let product of products ">
+        123
+      </div>
+    </ng-template>
+    <ng-template #notproducts>
+      <div class="isLoad"></div>
+    </ng-template>
+  </div>
+</div>

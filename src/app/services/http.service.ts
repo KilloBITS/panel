@@ -10,4 +10,8 @@ export class HttpService {
     return this.httpService.get('http://localhost/panel/all-tournaments');
   }
 
+  getProducts() {
+    return this.httpService.get('http://localhost/panel/all-products');
+  }
+
 }

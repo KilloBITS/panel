@@ -1,6 +1,6 @@
 <div class="content-box">
   <div class="instruments-menu">
-    <app-instruments [tournamentsData]="tournaments"></app-instruments>
+    <app-instruments-tournaments [tournamentsData]="tournaments"></app-instruments-tournaments>
   </div>
   <div class="box1280">
     <div class="tournament-box" *ngIf="tournaments;then yestournament else nottournament"></div>
