@@ -1,3 +1,5 @@
-<div class="data-block" [style.background-color]="color">
+<div class="data-block" [ngStyle]="{background: color}">
   <div class="block-title">{{title}}</div>
+  <div class="block-length">{{datalength}}</div>
+  <i class="fas {{icon}}"></i>
 </div>
