@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { HttpService } from '../../services/http.service';
 import { Tournaments } from '../../models/tournaments';
 
@@ -8,10 +8,20 @@ import { Tournaments } from '../../models/tournaments';
   styleUrls: ['./tournaments.component.scss'],
   providers: [HttpService]
 })
+
 export class TournamentsComponent implements OnInit {
   tournaments: Tournaments;
-  constructor(private httpService: HttpService) {}
+  addmodal = false;
+  constructor(private httpService: HttpService) { }
 
+  openModal() {
+    console.log('open');
+    this.addmodal = true;
+  }
+  closeModal() {
+    console.log('close');
+    this.addmodal = false;
+  }
   ngOnInit() {
     this.httpService.getTournaments().subscribe((data: Tournaments) => {
       this.tournaments = data;

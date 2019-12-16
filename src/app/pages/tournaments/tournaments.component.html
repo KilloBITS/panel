@@ -1,6 +1,6 @@
 <div class="content-box">
   <div class="instruments-menu">
-    <app-instruments-tournaments [tournamentsData]="tournaments"></app-instruments-tournaments>
+    <app-instruments-tournaments [tournamentsData]="tournaments" (openmodal)="openModal($event)"></app-instruments-tournaments>
   </div>
   <div class="box1280">
     <div class="tournament-box" *ngIf="tournaments;then yestournament else nottournament"></div>
@@ -10,8 +10,8 @@
         <div class="tournament-line image">
           <img src="http://localhost/data/tournaments/map/{{tour.map}}.png" alt=""/>
         </div>
-        <div class="button bOrange w80 noBordelRight"><i class="fas fa-edit"></i> Редактировать</div>
-        <div class="button bOrange w20 noBordelLeft bbMinus"><i class="fas fa-bars"></i></div>
+        <div class="button bOrange w80 noBorderRight"><i class="fas fa-edit"></i> Редактировать</div>
+        <div class="button bOrange w20 noBorderLeft bbMinus"><i class="fas fa-bars"></i></div>
       </div>
     </ng-template>
     <ng-template #nottournament>
@@ -20,4 +20,4 @@
   </div>
 </div>
 
-<app-add-tournament id="addModal" class="modal"></app-add-tournament>
+<app-add-tournament id="addModal" class="modal" *ngIf="addmodal" (closemodal)="closeModal($event)"></app-add-tournament>

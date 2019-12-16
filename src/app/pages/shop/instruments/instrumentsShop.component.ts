@@ -19,8 +19,9 @@ export class InstrumentsShopComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
+    console.log(this.productsData)
     if (this.productsData !== null) {
-      this.all = this.productsData.length;
+      // this.all = this.productsData.length;
     }
   }
 }

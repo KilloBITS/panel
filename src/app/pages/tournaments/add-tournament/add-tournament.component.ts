@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-add-tournament',
@@ -6,11 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-tournament.component.scss']
 })
 export class AddTournamentComponent implements OnInit {
+  @Output() closemodal: EventEmitter<void> = new EventEmitter();
   public selectedtab = 1;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  closeModal() {
+    this.closemodal.emit();
   }
 
   selectTab($event) {
