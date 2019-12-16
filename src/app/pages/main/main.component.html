@@ -1,1 +1,15 @@
-<p>main works!</p>
+<div class="content-box">
+  <div class="instruments-menu">
+
+  </div>
+  <div class="box1280">
+    <div class="inline">
+      <app-block [color]="'#e85454'" [title]="'Пользователей'"></app-block>
+      <app-block [color]="'#4bc54b'" [title]="'Турниров'"></app-block>
+      <app-block [color]="'#9f9ff7'" [title]="'Товаров'"></app-block>
+      <app-block [color]="'#f1d74e'" [title]="'Гостей'"></app-block>
+    </div>
+    <app-chart [title]="'Посетителей'" [data]="visitors"></app-chart>
+    <app-chart [title]="'Турниров'" [data]="visitors"></app-chart>
+  </div>
+</div>

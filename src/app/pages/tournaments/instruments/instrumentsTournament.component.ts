@@ -6,6 +6,7 @@ import { Tournaments } from '../../../models/tournaments';
   templateUrl: './instrumentsTournament.component.html',
   styleUrls: ['./instrumentsTournament.component.scss']
 })
+
 export class InstrumentsTournamentComponent implements OnInit, OnChanges {
   @Input() tournamentsData: Tournaments;
   @Output() openmodal: EventEmitter<void> = new EventEmitter();
@@ -20,7 +21,6 @@ export class InstrumentsTournamentComponent implements OnInit, OnChanges {
   }
 
   openmodalclick() {
-    console.log('000')
     this.openmodal.emit();
   }
 

@@ -17,6 +17,8 @@ import {StoreModule} from '@ngrx/store';
 import {HttpClientModule} from '@angular/common/http';
 import {AddTournamentComponent} from './pages/tournaments/add-tournament/add-tournament.component';
 import {ShopComponent} from './pages/shop/shop.component';
+import { ChartComponent } from './components/chart/chart.component';
+import { BlockComponent } from './components/block/block.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import {ShopComponent} from './pages/shop/shop.component';
     InstrumentsTournamentComponent,
     AddTournamentComponent,
     ShopComponent,
-    InstrumentsShopComponent
+    InstrumentsShopComponent,
+    ChartComponent,
+    BlockComponent
   ],
   imports: [
     BrowserModule,
