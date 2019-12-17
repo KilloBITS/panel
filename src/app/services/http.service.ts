@@ -1,22 +1,23 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class HttpService {
+  URL = 'http://chicken-dinner.club';
 
   constructor(private httpService: HttpClient) {
   }
 
   getVisitors() {
-    return this.httpService.get('http://localhost/panel/get-visitors');
+    return this.httpService.get(this.URL + '/panel/get-visitors');
   }
 
   getTournaments() {
-    return this.httpService.get('http://localhost/panel/all-tournaments');
+    return this.httpService.get(this.URL + '/panel/all-tournaments');
   }
 
   getProducts() {
-    return this.httpService.get('http://localhost/panel/all-products');
+    return this.httpService.get(this.URL + '/panel/all-products');
   }
 
 }
