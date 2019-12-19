@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class HttpService {
-  URL = 'http://localhost';
+  URL = 'http://chicken-dinner.club';
+  // URL = 'http://localhost';
 
   constructor(private httpService: HttpClient) {
   }
