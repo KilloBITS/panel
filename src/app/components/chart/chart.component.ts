@@ -17,7 +17,7 @@ export class ChartComponent implements OnInit, OnChanges {
   lineChartData: ChartDataSets[] = [
     { data: [0] },
   ];
-
+  lineChartLabels: Label[] = [];
   lineChartOptions = {
     responsive: true,
   };
@@ -64,8 +64,13 @@ export class ChartComponent implements OnInit, OnChanges {
       });
 
       console.log(newArrayDate)
+      this.lineChartLabels = Object.keys(newArrayDate);
 
-      this.chartInit([85, 72, 78, 75, 77, 75]);
+      let arrayValues = [];
+      Object.keys(newArrayDate).forEach(len => {
+        arrayValues.push( newArrayDate[len] )
+      })
+      this.chartInit(arrayValues);
     }
   }
 
