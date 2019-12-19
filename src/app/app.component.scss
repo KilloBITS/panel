@@ -3,6 +3,9 @@
   @if $media == min_pc {
     @media only screen and (max-width: 1372px) { @content; }
   }
+  @if $media == phone {
+    @media only screen and (max-width: 800px) { @content; }
+  }
 }
 
 body{
@@ -21,12 +24,34 @@ body{
   .nav-prelink{
     float: left;
     width: 260px;
+    @media screen and (max-width: 800px) {
+      width: 60px;
+    }
+    transition: .3s;
     height: 100%;
     background-color: #000000;
+    position: relative;
+    .mobile-menu-btn{
+      display: none;
+      cursor: pointer;
+      @media screen and (max-width: 800px) {
+        display: block;
+        color: white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 25px;
+      }
+    }
   }
   nav{
     float: left;
     width: fit-content;
+    @include respond-to(phone) {
+      float: right;
+      margin-right: 10px;
+    };
     a{
       line-height: 45px;
       margin: 0 10px;
@@ -46,6 +71,7 @@ body{
         transition: .3s;
         margin: 0 5px;
         @include respond-to(min_pc) { margin: 0 2px; };
+        @include respond-to(phone) { margin: 0; };
       }
       span{
         // Для телефонов

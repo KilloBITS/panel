@@ -4,12 +4,12 @@
   </div>
   <div class="box1280">
     <div class="inline">
-      <app-block [color]="'linear-gradient(45deg, rgb(206, 86, 86), rgb(177, 28, 28))'" [title]="'Пользователей'" [icon]="'fa-user'" [data]="visitors"></app-block>
+      <app-block [color]="'linear-gradient(45deg, rgb(206, 86, 86), rgb(177, 28, 28))'" [title]="'Пользователей'" [icon]="'fa-user'" [data]="users"></app-block>
       <app-block [color]="'linear-gradient(45deg, rgb(78, 241, 89), rgb(29, 181, 37))'" [title]="'Турниров'" [icon]="'fa-trophy'" [data]="tournaments"></app-block>
       <app-block [color]="'linear-gradient(45deg, rgb(132, 135, 206), rgb(50, 57, 175))'" [title]="'Товаров'" [icon]="'fa-shopping-bag'" [data]="products"></app-block>
       <app-block [color]="'linear-gradient(45deg, rgb(241, 215, 78), rgb(206, 181, 52))'" [title]="'Посетителей'" [icon]="'fa-users'" [data]="visitors"></app-block>
     </div>
-    <app-chart [title]="'Посетителей'" [data]="visitors"></app-chart>
-    <app-chart [title]="'Турниров'" [data]="visitors"></app-chart>
+    <app-chart [title]="'Посетители'" [data]="visitors" [chartid]="'viewers'" [isDate]="'date'"></app-chart>
+    <app-chart [title]="'Пользователи'" [data]="users" [chartid]="'users'" [isDate]="'isDate'"></app-chart>
   </div>
 </div>

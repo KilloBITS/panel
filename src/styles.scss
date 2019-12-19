@@ -49,6 +49,10 @@ body{
 .box1280{
   width: 100%;
   max-width: calc(100% - 260px);
+  @media screen and (max-width: 800px) {
+    max-width: calc(100% - 60px);
+    float: right;
+  }
   margin: auto;
   float: left;
   height: 100%;
@@ -169,6 +173,18 @@ body{
 .instruments-menu{
   float: left;
   width: 260px;
+  @media screen and (max-width: 800px) {
+    top: 60px;
+    width: 60px;
+    height: calc(100% - 45px);
+    position: fixed;
+    z-index: 1;
+    &.full{
+      width: 260px;
+      position: fixed;
+    }
+  }
+  transition: .3s;
   background-color: #dadada;
   height: calc(100% + 15px);
   margin-top: -15px;
@@ -177,6 +193,10 @@ body{
     float: left;
     width: calc(100% - 20px);
     padding: 10px;
+    @media screen and (max-width: 800px) {
+      padding: 4px;
+      width: calc(100% - 8px);
+    }
     .instruments-head{
       float: left;
       .logotype{
@@ -199,6 +219,10 @@ body{
         }
         .instrument-title{
           width: fit-content;
+          @media screen and (max-width: 800px) {
+            font-size: 10px;
+            text-align: center;
+          }
           font-size: 18px;
           color: #868686;
           text-shadow: 1px 1px 0 rgba(236, 236, 236, 0.7);
@@ -210,6 +234,16 @@ body{
           text-shadow: 1px 1px 0 rgba(236, 236, 236, 0.7);
           float: left;
           padding: 0 10px;
+          @media screen and (max-width: 800px) {
+            font-size: 20px;
+            color: #2f2f2f;
+            text-shadow: 1px 1px 0 rgba(236, 236, 236, 0.7);
+            float: none;
+            padding: 0 10px;
+            margin: auto;
+            text-align: center;
+          }
+
         }
       }
       .button{

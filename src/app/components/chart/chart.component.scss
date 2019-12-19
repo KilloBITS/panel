@@ -1,9 +1,25 @@
 .chart{
-  width: calc(50% - 20px);
+  width: calc(50% - 22px);
   margin: 10px;
   float: left;
+  border: 1px solid #dec440;
+  background-color: #fff8d0;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
 }
 
 .chart-title{
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 0;
+  float: left;
+  width: 100%;
+  background: linear-gradient(45deg, rgb(241, 215, 78), rgb(206, 181, 52));
+  margin-bottom: 15px;
+}
 
+.chart-content{
+  float: left;
+  width: 100%;
 }

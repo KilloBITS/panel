@@ -1,5 +1,6 @@
 import { Input, Component, OnInit, OnChanges, Output, EventEmitter } from '@angular/core';
 import { Tournaments } from '../../../models/tournaments';
+import {Globals} from '../../../globals';
 
 @Component({
   selector: 'app-instruments-tournaments',
@@ -14,7 +15,7 @@ export class InstrumentsTournamentComponent implements OnInit, OnChanges {
   currenttournaments: number = null;
   oldtournaments: number = null;
 
-  constructor() { }
+  constructor(public openMobile: Globals) { }
 
   ngOnInit() {
 
@@ -26,9 +27,7 @@ export class InstrumentsTournamentComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     if (this.tournamentsData) {
-      this.alltournaments = this.tournamentsData.tournaments.filter((tournament) => {
-        return tournament.price > 0;
-      }).length;
+      this.alltournaments = this.tournamentsData.tournaments.length;
 
       this.currenttournaments = this.tournamentsData.tournaments.filter((tournament) => {
         return !tournament.isEnded;

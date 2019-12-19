@@ -3,9 +3,13 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class HttpService {
-  URL = 'http://chicken-dinner.club';
+  URL = 'http://localhost';
 
   constructor(private httpService: HttpClient) {
+  }
+
+  getUsers() {
+    return this.httpService.get(this.URL + '/panel/get-users');
   }
 
   getVisitors() {

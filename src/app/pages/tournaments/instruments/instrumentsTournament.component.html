@@ -21,8 +21,8 @@
             </div>
         </div>
 
-      <div class="button bGreen" (click)="openmodalclick()">Создать турнир</div>
-      <div class="button bRed">Удалить</div>
+      <div class="button bGreen" (click)="openmodalclick()">{{(openMobile.openMobile)?'Создать турнир':'+'}}</div>
+      <div class="button bRed">{{(openMobile.openMobile)?'Удалить':'-'}}</div>
 
     </div>
     <div class="instruments-footer">

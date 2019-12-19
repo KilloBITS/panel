@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
+import { ChartsModule } from 'ng2-charts';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 /* Import redux */
@@ -20,6 +20,7 @@ import {ShopComponent} from './pages/shop/shop.component';
 import { ChartComponent } from './components/chart/chart.component';
 import { BlockComponent } from './components/block/block.component';
 
+import { Globals } from './globals';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { BlockComponent } from './components/block/block.component';
   ],
   imports: [
     BrowserModule,
+    ChartsModule,
     HttpClientModule,
     AppRoutingModule,
     StoreModule.forRoot(reducers, {
@@ -45,6 +47,9 @@ import { BlockComponent } from './components/block/block.component';
         strictActionImmutability: true
       }
     })
+  ],
+  providers: [
+    Globals
   ],
   bootstrap: [AppComponent]
 })

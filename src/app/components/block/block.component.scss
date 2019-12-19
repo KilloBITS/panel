@@ -1,6 +1,11 @@
 .data-block{
   float: left;
   width: calc(25% - 32px);
+  @media screen and (max-width: 800px) {
+    width: calc(100% - 32px);
+    height: 70px;
+    font-size: 20px;
+  }
   margin: 5px;
   height: 120px;
   padding: 10px;
@@ -15,6 +20,9 @@
     right: 15px;
     bottom: 15px;
     font-size: 80px;
+    @media screen and (max-width: 800px) {
+      font-size: 50px;
+    }
     color: rgba(255, 255, 255, 0.8);
   }
   .block-title{
@@ -28,5 +36,10 @@
     left: 15px;
     bottom: 15px;
     font-size: 60px;
+    @media screen and (max-width: 800px) {
+      left: 8px;
+      bottom: 0px;
+      font-size: 45px;
+    }
   }
 }

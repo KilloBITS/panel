@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Injectable  } from '@angular/core';
+import {HttpService} from './services/http.service';
+import {Globals} from './globals';
 
 @Component({
   selector: 'app-root',
@@ -6,13 +8,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 
+@Injectable()
+
 export class AppComponent {
   active: number;
   key: number;
-  constructor() {}
+
+  constructor(public openMobile: Globals) {}
 
   selectButtonNav($event) {
     const keyEvent = $event.target.getAttribute('key');
     this.active = Number(keyEvent);
+  }
+
+  mobileMenu() {
+    this.openMobile.openMobile = !this.openMobile.openMobile;
+    console.log(this.openMobile.openMobile);
   }
 }

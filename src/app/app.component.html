@@ -1,5 +1,7 @@
 <div class="nav-menu">
-  <div class="nav-prelink"></div>
+  <div class="nav-prelink">
+    <div class="mobile-menu-btn" (click)="mobileMenu()"><i class="fas fa-bars"></i></div>
+  </div>
   <nav>
     <a routerLink="/main" routerLinkActive="active" key="0" (click)="selectButtonNav($event)" [className]="active === 0 ? 'active' : null"><i class="fas fa-home"></i><span>Главная</span></a>
     <a routerLink="/tournaments" routerLinkActive="active" key="1" (click)="selectButtonNav($event)" [className]="active === 1 ? 'active' : null"><i class="fas fa-trophy"></i><span>Турниры</span></a>

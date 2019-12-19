@@ -1,3 +1,13 @@
 <div class="chart">
   <div class="chart-title">{{title}}</div>
+  <div class="chart-content" id="{{'chartContainer_'+chartid}}">
+    <canvas baseChart
+            [datasets]="lineChartData"
+            [options]="lineChartOptions"
+            [colors]="lineChartColors"
+            [legend]="lineChartLegend"
+            [chartType]="lineChartType"
+            [plugins]="lineChartPlugins">
+    </canvas>
+  </div>
 </div>

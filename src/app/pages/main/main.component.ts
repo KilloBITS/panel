@@ -3,6 +3,7 @@ import {HttpService} from '../../services/http.service';
 import {Visitors} from '../../models/visitors';
 import {Tournaments} from '../../models/tournaments';
 import {Products} from '../../models/products';
+import {Users} from '../../models/users';
 
 @Component({
   selector: 'app-main',
@@ -15,6 +16,7 @@ export class MainComponent implements OnInit {
   visitors: Visitors;
   tournaments: Tournaments;
   products: Products;
+  users: Users;
 
   constructor(private httpService: HttpService) {
   }
@@ -37,11 +39,18 @@ export class MainComponent implements OnInit {
     });
   }
 
+  async initUsers() {
+    await this.httpService.getUsers().subscribe((data: Users) => {
+      this.users = data;
+    });
+  }
+
 
   ngOnInit() {
     this.initVisitors();
     this.initTournaments();
     this.initProducts();
+    this.initUsers();
   }
 
 }
