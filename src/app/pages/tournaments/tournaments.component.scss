@@ -8,6 +8,7 @@
   .tournaments{
     position: relative;
     transition: .3s;
+    width: calc(100% / 5 - 20px);
     @media screen and (max-width: 2000px) {
       width: calc(100% / 5 - 20px);
     }
