@@ -21,6 +21,7 @@ import { ChartComponent } from './components/chart/chart.component';
 import { BlockComponent } from './components/block/block.component';
 
 import { Globals } from './globals';
+import { InputComponent } from './components/input/input.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { Globals } from './globals';
     ShopComponent,
     InstrumentsShopComponent,
     ChartComponent,
-    BlockComponent
+    BlockComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,

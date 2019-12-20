@@ -54,6 +54,8 @@
   font-size: 14px;
   width: 120px;
   border-radius: 3px;
+  border: 1px solid #cc8902;
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
   &.hide{
     display: none;
   }

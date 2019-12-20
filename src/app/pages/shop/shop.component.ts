@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Products} from '../../models/products';
 import {HttpService} from '../../services/http.service';
+import { Globals } from '../../globals';
 
 @Component({
   selector: 'app-shop',
@@ -11,7 +12,7 @@ import {HttpService} from '../../services/http.service';
 export class ShopComponent implements OnInit {
   products: Products;
 
-  constructor(private httpService: HttpService) {
+  constructor(private httpService: HttpService, public openMobile: Globals) {
   }
 
   ngOnInit() {

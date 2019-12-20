@@ -199,6 +199,9 @@ body{
     }
     .instruments-head{
       float: left;
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
       .logotype{
         float: left;
         width: 100%;

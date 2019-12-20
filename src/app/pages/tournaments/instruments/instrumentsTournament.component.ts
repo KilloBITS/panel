@@ -30,11 +30,11 @@ export class InstrumentsTournamentComponent implements OnInit, OnChanges {
       const tourData = this.tournamentsData;
       this.alltournaments = tourData['tournaments'].length;
 
-      this.currenttournaments = tourData['tournaments'].filter((tournament) => {
+      this.currenttournaments = tourData['tournaments'].filter((tournament: any) => {
         return !tournament.isEnded;
       }).length;
 
-      this.oldtournaments = tourData['tournaments'].filter((tournament) => {
+      this.oldtournaments = tourData['tournaments'].filter((tournament: any) => {
         return tournament.isEnded;
       }).length;
     }
