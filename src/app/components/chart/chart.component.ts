@@ -27,8 +27,8 @@ export class ChartComponent implements OnInit, OnChanges {
 
   lineChartColors: Color[] = [
     {
-      borderColor: 'rgb(241, 215, 78)',
-      backgroundColor: 'rgba(241, 215, 78, 0.5)',
+      borderColor: 'rgba(132, 135, 206, 0.8)',
+      backgroundColor: 'rgba(132, 135, 206, 0.3)',
     },
   ];
 
@@ -52,11 +52,11 @@ export class ChartComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     if (this.data) {
-      let newArrayDate: any = {};
-      let arrayValues: any = [];
+      const newArrayDate: any = {};
+      const arrayValues: any = [];
 
-      let sortData: any = this.data.sort((a: any, b: any) => {
-        return moment(a[this.isDate]) - moment(b[this.isDate]);
+      const sortData: [] = this.data.sort((a: any, b: any) => {
+        return (moment(a[this.isDate]) as any) - (moment(b[this.isDate]) as any);
       });
 
       sortData.forEach(data => {
