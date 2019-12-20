@@ -1,7 +1,10 @@
 .data-block{
   float: left;
   width: calc(25% - 32px);
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1035px) {
+    width: calc(50% - 32px);
+  }
+  @media screen and (max-width: 500px) {
     width: calc(100% - 32px);
     height: 70px;
     font-size: 20px;

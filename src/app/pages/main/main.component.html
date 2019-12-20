@@ -9,7 +9,7 @@
       <app-block [color]="'linear-gradient(45deg, rgb(132, 135, 206), rgb(50, 57, 175))'" [title]="'Товаров'" [icon]="'fa-shopping-bag'" [data]="products"></app-block>
       <app-block [color]="'linear-gradient(45deg, rgb(241, 215, 78), rgb(206, 181, 52))'" [title]="'Посетителей'" [icon]="'fa-users'" [data]="visitors"></app-block>
     </div>
-    <app-chart [title]="'Посетители'" [data]="visitors" [chartid]="'viewers'" [isDate]="'date'"></app-chart>
-    <app-chart [title]="'Пользователи'" [data]="users" [chartid]="'users'" [isDate]="'isDate'"></app-chart>
+    <app-chart [title]="'Посетители'" [data]="visitors" [chartid]="'viewers'" [isDate]="'date'" [className]="'left'"></app-chart>
+    <app-chart [title]="'Пользователи'" [data]="users" [chartid]="'users'" [isDate]="'isDate'" [className]="'right'"></app-chart>
   </div>
 </div>

@@ -1,12 +1,38 @@
+.chartLoader{
+  position: absolute;
+  background-color: rgb(255, 248, 209);
+  width: 100%;
+  height: calc(100% - 43px);
+  top: 43px;
+  background-image: url(../../../assets/img/ajax-loading-red.gif);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .chart{
   width: calc(50% - 22px);
-  margin: 10px;
-  float: left;
-  border: 1px solid #dec440;
-  background-color: #fff8d0;
+  @media screen and (max-width: 800px) {
+    width: calc(100% - 32px);
+    margin-bottom: 15px!important;
+  }
+  border: 1px solid rgb(132, 135, 206);
+  background-color: #fefeff;
   overflow: hidden;
-  border-radius: 5px;
+  font-size: 20px;
+  border-radius: 6px;
+  color: white;
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
+  position: relative;
+  padding: 0;
+  &.left{
+    margin: 0 0 0 15px;
+    float: left;
+  }
+  &.right{
+    margin: 0 15px 0 0;
+    float: right;
+  }
 }
 
 .chart-title{
@@ -15,7 +41,7 @@
   padding: 10px 0;
   float: left;
   width: 100%;
-  background: linear-gradient(45deg, rgb(241, 215, 78), rgb(206, 181, 52));
+  background: linear-gradient(45deg, rgb(132, 135, 206), rgb(50, 57, 175));
   margin-bottom: 15px;
 }
 

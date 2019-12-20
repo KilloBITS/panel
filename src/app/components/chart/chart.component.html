@@ -1,6 +1,7 @@
-<div class="chart">
+<div class="{{'chart '+ className}}">
   <div class="chart-title">{{title}}</div>
   <div class="chart-content" id="{{'chartContainer_'+chartid}}">
+    <div class="chartLoader" *ngIf="chartLoader"></div>
     <canvas baseChart
             [datasets]="lineChartData"
             [labels]="lineChartLabels"
