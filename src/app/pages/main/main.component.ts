@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpService} from '../../services/http.service';
 import {Visitors} from '../../models/visitors';
+
 import {Tournaments} from '../../models/tournaments';
 import {Products} from '../../models/products';
 import {Users} from '../../models/users';
@@ -29,7 +30,7 @@ export class MainComponent implements OnInit {
 
   async initTournaments() {
     await this.httpService.getTournaments().subscribe((data: Tournaments) => {
-      this.tournaments = data.tournaments;
+      this.tournaments = data;
     });
   }
 

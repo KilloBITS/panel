@@ -26,14 +26,15 @@ export class InstrumentsTournamentComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-    if (this.tournamentsData) {
-      this.alltournaments = this.tournamentsData.tournaments.length;
+    if (this.tournamentsData && this.tournamentsData !== undefined) {
+      const tourData = this.tournamentsData;
+      this.alltournaments = tourData['tournaments'].length;
 
-      this.currenttournaments = this.tournamentsData.tournaments.filter((tournament) => {
+      this.currenttournaments = tourData['tournaments'].filter((tournament) => {
         return !tournament.isEnded;
       }).length;
 
-      this.oldtournaments = this.tournamentsData.tournaments.filter((tournament) => {
+      this.oldtournaments = tourData['tournaments'].filter((tournament) => {
         return tournament.isEnded;
       }).length;
     }
