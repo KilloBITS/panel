@@ -1,0 +1,27 @@
+.input-component{
+  float: left;
+  width: calc(100% - 20px);
+  margin: 5px 10px 5px 10px;
+  .input-title{
+    float: left;
+    width: 100%;
+  }
+  input, textarea{
+    float: left;
+    width: 100%;
+    border: 1px solid silver;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    &:focus{
+      border: 1px solid #ffab00;
+    }
+  }
+  input{
+    border-radius: 150px;
+    height: 30px;
+  }
+  textarea{
+    height: 200px;
+  }
+}

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Products} from '../../models/products';
 import {HttpService} from '../../services/http.service';
-import { Globals } from '../../globals';
+import {Globals} from '../../globals';
 
 @Component({
   selector: 'app-shop',
@@ -11,8 +11,17 @@ import { Globals } from '../../globals';
 })
 export class ShopComponent implements OnInit {
   products: Products;
+  addmodal = false;
 
   constructor(private httpService: HttpService, public openMobile: Globals) {
+  }
+
+  openModal() {
+    this.addmodal = true;
+  }
+
+  closeModal() {
+    this.addmodal = false;
   }
 
   ngOnInit() {

@@ -1,8 +1,8 @@
 <div class="nav-menu">
-  <div class="nav-prelink {{(openMobile.openMobile)?'full':null}}">
+  <div class="nav-prelink {{(openMobile.openMobile)?'full':null}}" *ngIf="auth.auth">
     <div class="mobile-menu-btn" (click)="mobileMenu()"><i class="{{openMobile.openMobile ? 'fas fa-times' : 'fas fa-bars'}}"></i></div>
   </div>
-  <nav>
+  <nav *ngIf="auth.auth">
     <a routerLink="/main" routerLinkActive="active" key="0" (click)="selectButtonNav($event)" [className]="active === 0 ? 'active' : null"><i class="fas fa-home"></i><span>Главная</span></a>
     <a routerLink="/tournaments" routerLinkActive="active" key="1" (click)="selectButtonNav($event)" [className]="active === 1 ? 'active' : null"><i class="fas fa-trophy"></i><span>Турниры</span></a>
     <a routerLink="/news" routerLinkActive="active" key="2" (click)="selectButtonNav($event)" [className]="active === 2 ? 'active' : null"><i class="fas fa-newspaper"></i><span>Новости</span></a>

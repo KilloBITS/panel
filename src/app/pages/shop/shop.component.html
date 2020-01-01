@@ -1,12 +1,65 @@
 <div class="content-box">
   <div class="instruments-menu {{(openMobile.openMobile)?'full':null}}">
-    <app-instruments-shop [productsData]="products"></app-instruments-shop>
+    <app-instruments-shop [productsData]="products" (openmodal)="openModal($event)"></app-instruments-shop>
   </div>
   <div class="box1280">
     <div class="tournament-box" *ngIf="products;then yesproducts else notproducts"></div>
     <ng-template #yesproducts>
-      <div class="tournaments" *ngFor="let product of products ">
-        123
+      <div class="products-category">
+
+        <div class="category-btn">
+          <i class="fas fa-parachute-box"></i>
+          <span>Сюрприз-боксы</span>
+        </div>
+
+        <div class="category-btn">
+          <i class="fas fa-mug-hot"></i>
+          <span>Кружки</span>
+        </div>
+
+        <div class="category-btn">
+          <i class="fas fa-tshirt"></i>
+          <span>Футболки</span>
+        </div>
+
+        <div class="category-btn">
+          <i class="fas fa-socks"></i>
+          <span>Носки</span>
+        </div>
+
+        <div class="category-btn">
+          <i class="fas fa-holly-berry"></i>
+          <span>Аксессуары</span>
+        </div>
+
+        <div class="category-btn">
+          <i class="fas fa-tag"></i>
+          <span>Брелоки</span>
+        </div>
+
+        <div class="category-btn">
+          <i class="fas fa-feather-alt"></i>
+          <span>Разное</span>
+        </div>
+
+        <div class="category-btn">
+          <i class="fas fa-gamepad"></i>
+          <span>Триггеры</span>
+        </div>
+
+      </div>
+      <div class="products" *ngFor="let product of products ">
+        <div class="products-line title">{{product.id + " | " + product.title[0]}}</div>
+        <div class="products-line image">
+          <img src="{{(product.img !== null) ? product.img : 'http://localhost/shop/none.png' }}" alt=""/>
+        </div>
+        <div class="button bOrange w80 noBorderRight"><i class="fas fa-edit"></i>Посмотреть</div>
+        <div class="button bOrange w20 noBorderLeft bbMinus" id="{{product.id}}"><i class="fas fa-bars"
+                                                                                 id="{{product.id}}"></i></div>
+        <div class="tour-func-list" *ngIf="productComponent === product.id">
+          <div class="list-item {{'item_' + product.AI}}" >Редактировать</div>
+          <div class="list-item {{'item_' + product.AI}}" >Удалить</div>
+        </div>
       </div>
     </ng-template>
     <ng-template #notproducts>
@@ -14,3 +67,5 @@
     </ng-template>
   </div>
 </div>
+
+<app-add-product id="addModal" class="modal" *ngIf="addmodal" (closemodal)="closeModal($event)"></app-add-product>

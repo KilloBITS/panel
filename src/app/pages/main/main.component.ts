@@ -15,7 +15,7 @@ import {Users} from '../../models/users';
 
 export class MainComponent implements OnInit {
   visitors: Visitors;
-  tournaments: Tournaments;
+  tournaments: (tournaments: any) => void;
   products: Products;
   users: Users;
 
@@ -30,7 +30,7 @@ export class MainComponent implements OnInit {
 
   async initTournaments() {
     await this.httpService.getTournaments().subscribe((data: Tournaments) => {
-      this.tournaments = data['tournaments'];
+      this.tournaments = data.tournaments;
     });
   }
 

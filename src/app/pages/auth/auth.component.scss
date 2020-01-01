@@ -1,0 +1,65 @@
+.auth-content {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  .auth-block {
+    justify-content: center;
+    margin: auto;
+    width: 600px;
+    position: relative;
+    background-color: #202020;
+    border: 1px solid #353535;
+    border-radius: 0;
+    .auth-line{
+      float: left;
+      width: calc(100% - 20px);
+      margin: 0 10px;
+      &.auth-title{
+        text-align: center;
+        font-size: 22px;
+        color: white;
+        padding: 10px 0;
+        margin-bottom: 10px;
+      }
+      input[type=text]{
+        float: right;
+        width: 100%;
+        text-align: center;
+        height: 30px;
+        margin-bottom: 10px;
+        border-radius: 150px;
+        border: 1px solid silver;
+        background-color: white !important;
+        font-size: 18px;
+        outline: none;
+      }
+      input[type=password]{
+        float: right;
+        width: 100%;
+        text-align: center;
+        height: 30px;
+        margin-bottom: 10px;
+        border-radius: 150px;
+        border: 1px solid silver;
+        background-color: white !important;
+        font-size: 18px;
+        outline: none;
+      }
+      input[type=submit]{
+        float: right;
+        width: 100%;
+        background-color: #ffab00;
+        border: 1px solid #ffab00;
+        height: 30px;
+        margin-bottom: 20px;
+        border-radius: 150px;
+        font-size: 17px;
+        cursor: pointer;
+        outline: none;
+      }
+    }
+  }
+}

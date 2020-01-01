@@ -22,7 +22,7 @@ class Tournament {
 class Kill_battles {
   title: string[];
   text: string[];
-  start_date: string
+  start_date: string;
   map: number;
   type: number;
   device: number;
@@ -34,11 +34,11 @@ class Kill_battles {
 }
 
 export class Tournaments {
-  tournaments(tournaments: any) {
-    throw new Error("Method not implemented.");
-  }
+  [index: number]: Tournament;
   AI: number;
   title: string[];
-  [index: number]: Tournament;
   kill_battles: Kill_battles;
+  tournaments(tournaments: any) {
+    throw new Error('Method not implemented.');
+  }
 }

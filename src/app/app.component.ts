@@ -14,15 +14,15 @@ export class AppComponent {
   active: number;
   key: number;
 
-  constructor(public openMobile: Globals) {}
+  constructor(public openMobile: Globals, public auth: Globals) {}
 
   selectButtonNav($event) {
     const keyEvent = $event.target.getAttribute('key');
     this.active = Number(keyEvent);
+    this.auth.auth = true;
   }
 
   mobileMenu() {
     this.openMobile.openMobile = !this.openMobile.openMobile;
-    console.log(this.openMobile.openMobile);
   }
 }

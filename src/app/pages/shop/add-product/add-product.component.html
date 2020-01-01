@@ -1,6 +1,7 @@
 <div class="add-tournament">
   <div class="add-tournament-line header">
-    <i class="fas fa-plus"></i> Создать турнир
+    <i class="fas fa-plus"></i>
+    Добавить товар
     <div class="close-modal" (click)="closeModal()"><i class="fas fa-times"></i></div>
   </div>
   <div class="add-tournament-line body">
@@ -8,11 +9,10 @@
       <div [className]="selectedtab === 1 ? 'tab-btn active' : 'tab-btn'" (click)="selectTab(1)">1</div>
       <div [className]="selectedtab === 2 ? 'tab-btn active' : 'tab-btn'" (click)="selectTab(2)">2</div>
       <div [className]="selectedtab === 3 ? 'tab-btn active' : 'tab-btn'" (click)="selectTab(3)">3</div>
-      <div [className]="selectedtab === 4 ? 'tab-btn active' : 'tab-btn'" (click)="selectTab(4)">4</div>
     </div>
     <div class="tab-contents">
       <div [className]="selectedtab === 1 ? 'tab active' : 'tab'" id="1">
-        <div class="tab-title">Локализация турнира</div>
+        <div class="tab-title">Локализация товара</div>
         <div class="tab-content">
           <div class="mini-tabs-btn">
             <div [className]="selectedsubtab === 1 ? 'mini-tab-btn active' : 'mini-tab-btn'" (click)="selectSubTab(1)">
@@ -42,19 +42,42 @@
         </div>
       </div>
       <div [className]="selectedtab === 2 ? 'tab active' : 'tab'" id="2">
-        <div class="tab-title">Настройки режимов</div>
+        <div class="tab-title">Настройки товара</div>
         <div class="tab-content">
+          <div class="left-tovar-block">
+            <input type="file" id="select-tovar-image" name="img"/>
+            <div class="add-image-block">
+              <img src="http://localhost/shop/none.png" alt=""/>
+            </div>
+            <label class="select-imgae" for="select-tovar-image">Выбрать изображение</label>
+          </div>
+          <div class="right-tovar-block">
 
+            <div class="input-area">
+              <div class="input-area-title">Тип товара</div>
+              <select name="type">
+                <option value="1">Сюрприз-боксы</option>
+                <option value="2">Кружки</option>
+                <option value="3">Кружки</option>
+                <option value="4">Футболки</option>
+                <option value="5">Носки</option>
+                <option value="6">Аксессуары</option>
+                <option value="7">Брелоки</option>
+                <option value="8">Разное</option>
+                <option value="9">Триггеры</option>
+              </select>
+            </div>
+
+            <div class="input-area">
+              <div class="input-area-title">Количевство на складе</div>
+              <input type="text" name="length" value="10"/>
+            </div>
+
+          </div>
         </div>
       </div>
       <div [className]="selectedtab === 3 ? 'tab active' : 'tab'" id="3">
-        <div class="tab-title">Настройки участников</div>
-        <div class="tab-content">
-
-        </div>
-      </div>
-      <div [className]="selectedtab === 4 ? 'tab active' : 'tab'" id="4">
-        <div class="tab-title"></div>
+        <div class="tab-title">Стоимость и скидки</div>
         <div class="tab-content">
 
         </div>

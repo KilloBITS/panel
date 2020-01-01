@@ -1,6 +1,6 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { HttpService } from '../../services/http.service';
-import { Tournaments } from '../../models/tournaments';
+import {Component, OnInit, EventEmitter, Output} from '@angular/core';
+import {HttpService} from '../../services/http.service';
+import {Tournaments} from '../../models/tournaments';
 import {Globals} from '../../globals';
 
 @Component({
@@ -15,23 +15,61 @@ export class TournamentsComponent implements OnInit {
   addmodal = false;
   tourComponent = null;
 
-  constructor(private httpService: HttpService, public openMobile: Globals) { }
+  constructor(private httpService: HttpService, public openMobile: Globals) {
+  }
 
   openModal() {
     this.addmodal = true;
   }
+
   closeModal() {
     this.addmodal = false;
   }
 
   clickList(event) {
-    // console.log(this.openMobile.openMobile)
     const isTrueSet = event.target.getAttribute('id');
     if (isTrueSet || parseInt(isTrueSet) > 0) {
-      this.tourComponent = parseInt(isTrueSet) ;
+      this.tourComponent = parseInt(isTrueSet);
     } else {
       this.tourComponent = null;
     }
+  }
+
+  /** tour methods **/
+  startTour(event) {
+    this.httpService.getStartTour(event.target.className.split(' ')[1].split('_')[1]).subscribe((data: any) => {
+      console.log(data);
+    });
+  }
+
+  liveTour(event) {
+    this.httpService.getLiveTour(event.target.className.split(' ')[1].split('_')[1]).subscribe((data: any) => {
+      console.log(data);
+    });
+  }
+
+  activeTour(event) {
+    this.httpService.getActiveTour(event.target.className.split(' ')[1].split('_')[1]).subscribe((data: any) => {
+      console.log(data);
+    });
+  }
+
+  editTour(event) {
+    this.httpService.getEditTour(event.target.className.split(' ')[1].split('_')[1]).subscribe((data: any) => {
+      console.log(data);
+    });
+  }
+
+  endTour(event) {
+    this.httpService.getEndTour(event.target.className.split(' ')[1].split('_')[1]).subscribe((data: any) => {
+      console.log(data);
+    });
+  }
+
+  removeTour(event) {
+    this.httpService.getRemoveTour(event.target.className.split(' ')[1].split('_')[1]).subscribe((data: any) => {
+      console.log(data);
+    });
   }
 
   ngOnInit() {

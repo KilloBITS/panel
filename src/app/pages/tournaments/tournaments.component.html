@@ -14,12 +14,12 @@
         <div class="button bOrange w80 noBorderRight"><i class="fas fa-edit"></i> Редактировать</div>
         <div class="button bOrange w20 noBorderLeft bbMinus" id="{{tour.AI}}"><i class="fas fa-bars" id="{{tour.AI}}"></i></div>
         <div class="tour-func-list" *ngIf="tourComponent === tour.AI">
-          <div class="list-item">Начать</div>
-          <div class="list-item">Трансляция</div>
-          <div class="list-item">Активировать</div>
-          <div class="list-item">Редактировать</div>
-          <div class="list-item">Завершить</div>
-          <div class="list-item">Удалить</div>
+          <div class="list-item {{'item_' + tour.AI}}" (click)="startTour($event)">Начать</div>
+          <div class="list-item {{'item_' + tour.AI}}" (click)="liveTour($event)">Трансляция</div>
+          <div class="list-item {{'item_' + tour.AI}}" (click)="activeTour($event)">Активировать</div>
+          <div class="list-item {{'item_' + tour.AI}}" (click)="editTour($event)">Редактировать</div>
+          <div class="list-item {{'item_' + tour.AI}}" (click)="endTour($event)">Завершить</div>
+          <div class="list-item {{'item_' + tour.AI}}" (click)="removeTour($event)">Удалить</div>
         </div>
       </div>
 

@@ -20,7 +20,7 @@ export class BlockComponent implements OnInit, OnChanges {
 
 
   ngOnChanges() {
-    if(this.data){
+    if (this.data) {
       this.datalength = this.data.length;
     }
   }

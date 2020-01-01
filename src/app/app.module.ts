@@ -21,7 +21,13 @@ import { ChartComponent } from './components/chart/chart.component';
 import { BlockComponent } from './components/block/block.component';
 
 import { Globals } from './globals';
+import { AuthGuard } from './_guard/AuthGuard';
 import { InputComponent } from './components/input/input.component';
+import { AuthComponent } from './pages/auth/auth.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { TasksComponent } from './components/tasks/tasks.component';
+import { TextareaComponent } from './components/textarea/textarea.component';
+import { AddProductComponent } from './pages/shop/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +41,11 @@ import { InputComponent } from './components/input/input.component';
     InstrumentsShopComponent,
     ChartComponent,
     BlockComponent,
-    InputComponent
+    InputComponent,
+    AuthComponent,
+    TasksComponent,
+    TextareaComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
@@ -48,10 +58,12 @@ import { InputComponent } from './components/input/input.component';
         strictStateImmutability: true,
         strictActionImmutability: true
       }
-    })
+    }),
+    ReactiveFormsModule
   ],
   providers: [
-    Globals
+    Globals,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

@@ -1,3 +1,5 @@
 <div class="input-component">
-    <input type="text">
+    <div class="input-title">{{title}}</div>
+    <input type="text" *ngIf="block === 'input'"/>
+    <textarea *ngIf="block === 'textarea'"></textarea>
 </div>

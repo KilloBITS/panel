@@ -1,6 +1,7 @@
-import { Input, Component, OnInit, OnChanges, Output, EventEmitter } from '@angular/core';
-import { Tournaments } from '../../../models/tournaments';
+import {Input, Component, OnInit, OnChanges, Output, EventEmitter} from '@angular/core';
+import {Tournaments} from '../../../models/tournaments';
 import {Globals} from '../../../globals';
+import {filter} from 'rxjs/operators';
 
 @Component({
   selector: 'app-instruments-tournaments',
@@ -15,7 +16,8 @@ export class InstrumentsTournamentComponent implements OnInit, OnChanges {
   currenttournaments: number = null;
   oldtournaments: number = null;
 
-  constructor(public openMobile: Globals) { }
+  constructor(public openMobile: Globals) {
+  }
 
   ngOnInit() {
 
@@ -26,17 +28,26 @@ export class InstrumentsTournamentComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-    if (this.tournamentsData && this.tournamentsData !== undefined) {
+    if (this.tournamentsData) {
       const tourData = this.tournamentsData;
-      this.alltournaments = tourData['tournaments'].length;
+      this.alltournaments = tourData.tournaments.length;
 
-      this.currenttournaments = tourData['tournaments'].filter((tournament: any) => {
-        return !tournament.isEnded;
-      }).length;
+      if (tourData.tournaments) {
+        const a: any = tourData.tournaments;
 
-      this.oldtournaments = tourData['tournaments'].filter((tournament: any) => {
-        return tournament.isEnded;
-      }).length;
+        this.currenttournaments = a.filter((tournament: any) => {
+          return !tournament.isEnded;
+        }).length;
+
+        this.oldtournaments = a.filter((tournament: any) => {
+          return tournament.isEnded;
+        }).length;
+
+      } else {
+        this.currenttournaments = 0;
+        this.oldtournaments = 0;
+      }
+
     }
   }
 }
